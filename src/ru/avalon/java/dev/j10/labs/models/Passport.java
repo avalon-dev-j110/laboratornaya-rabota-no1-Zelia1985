@@ -1,6 +1,8 @@
 package ru.avalon.java.dev.j10.labs.models;
 
-/**
+import java.util.Date;
+
+/*
  * Представление о паспортных данных человека.
  * <p>
  * Паспортные данные должны включать:
@@ -15,7 +17,7 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+
 
     /*
      * TODO(Студент): Закончить определение класса.
@@ -37,4 +39,42 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
+
+public class Passport {
+    int numberpassport;
+    String name;
+    String surname;
+    String patronymic;
+   
+    String secondname;
+    Date birthday;
+    Date issue;
+    int policedepartment;
+
+    public int getNumberpassport() {
+        return numberpassport;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+    
+    public Passport(int numberpassport, String name, String surname, String patronymic) {
+        this.numberpassport = numberpassport;
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+    }
+    
+
+
+    
 }
