@@ -1,5 +1,7 @@
 package ru.avalon.java.dev.j10.labs.models;
 
+import ru.avalon.java.dev.j10.labs.commons.Addres;
+
 /**
  * Представление о человеке.
  * <p>
@@ -11,6 +13,29 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Person {
+    Passport PassportDate;
+    Addres Propiska;
+
+    public Person(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Passport getPassportDate() {
+        return PassportDate;
+    }
+
+    public Addres getPropiska() {
+        return Propiska;
+    }
+
+    public Person(Passport PassportDate, Addres Propiska) {
+        this.PassportDate = PassportDate;
+        this.Propiska = Propiska;
+    }
+    
+  
+    
+    
 
     /**
      * Возврвщает полное имя человека.
@@ -29,12 +54,19 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-    public String getFullName() {
-        /*
-         * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
-         */
-        return null;
-    }
+//    public String getFullName() {
+//       if (PassportDate.name!=null){
+//         if (PassportDate.secondname!=null){
+//            if (PassportDate.patronymic!=null){
+//                String FullName = PassportDate.name+PassportDate.secondname;
+//            }   
+//           }   
+//       }
+//        /*
+//         * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
+//         */
+//        return null;
+//    }
 
     /**
      * Возвращает адрес, по которому проживает человек.
@@ -45,6 +77,7 @@ public class Person {
      * @return адрес регистрации в виде строки.
      */
     public String getAddress() {
+        System.out.println(Propiska);
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */

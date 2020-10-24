@@ -7,12 +7,14 @@ public class Main {
     /*
      * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
      */
-    Main() {
+    public static void main(String[] args) {
 
-        Person ivanov = null;
+        Person ivanov = new Person("3434");
         Person smith = null;
+        
+       
 
-        /*23434
+        /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
          * 1. Проинициализируейте переменную 'ivanov', так,

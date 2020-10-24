@@ -13,3 +13,17 @@
  * 4. Подумайте над тем, какие методы должны быть объявлены
  *    в классе.
  */
+package ru.avalon.java.dev.j10.labs.commons;
+
+public class Addres{
+    String adress;
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public Addres(String adress) {
+        this.adress = adress;
+    }
+    
+}

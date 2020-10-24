@@ -45,7 +45,6 @@ public class Passport {
     String name;
     String surname;
     String patronymic;
-   
     String secondname;
     Date birthday;
     Date issue;
