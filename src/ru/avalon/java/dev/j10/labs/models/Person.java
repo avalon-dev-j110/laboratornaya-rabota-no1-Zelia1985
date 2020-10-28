@@ -2,6 +2,7 @@ package ru.avalon.java.dev.j10.labs.models;
 
 import ru.avalon.java.dev.j10.labs.commons.Addres;
 
+
 /**
  * Представление о человеке.
  * <p>
@@ -13,30 +14,25 @@ import ru.avalon.java.dev.j10.labs.commons.Addres;
  * </ol>
  */
 public class Person {
-    Passport PassportDate;
-    Addres Propiska;
-
-    public Person(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Passport getPassportDate() {
-        return PassportDate;
-    }
-
-    public Addres getPropiska() {
-        return Propiska;
-    }
-
-    public Person(Passport PassportDate, Addres Propiska) {
-        this.PassportDate = PassportDate;
-        this.Propiska = Propiska;
-    }
     
-  
-    
-    
+    Passport pasData;
+    Addres regAdres;
 
+ 
+    public Person(String name, String surname, String patronymic, String secondname,
+            String country, String city, String street, int houseNumber, int apartment) {
+        this.pasData = new Passport(name,surname,patronymic,secondname);
+        this.regAdres = new Addres(country,city,street,houseNumber,apartment);
+    }
+
+   
+    public Passport getPasData() {
+        return pasData;
+    }
+
+    public Addres getRegAdres() {
+        return regAdres;
+    }
     /**
      * Возврвщает полное имя человека.
      * <p>
@@ -54,19 +50,18 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-//    public String getFullName() {
-//       if (PassportDate.name!=null){
-//         if (PassportDate.secondname!=null){
-//            if (PassportDate.patronymic!=null){
-//                String FullName = PassportDate.name+PassportDate.secondname;
-//            }   
-//           }   
-//       }
-//        /*
-//         * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
-//         */
-//        return null;
-//    }
+    public String getFullName() {
+        String fullName = null;
+        
+        if (!pasData.getName().isEmpty() & !pasData.getSurname().isEmpty() & !pasData.getPatronymic().isEmpty())
+            fullName = pasData.getName() + " " + pasData.getSurname() + " " + pasData.getPatronymic();
+        if (pasData.getPatronymic().isEmpty() & !pasData.getSecondname().isEmpty())
+            fullName = pasData.getName() + " " +  pasData.getSecondname().charAt(0) + ". " + pasData.getSurname();
+        if (pasData.getPatronymic().isEmpty() & pasData.getSecondname().isEmpty())
+            fullName = pasData.getName() + " " + pasData.getSurname();
+       
+        return fullName;
+    }
 
     /**
      * Возвращает адрес, по которому проживает человек.
@@ -77,10 +72,9 @@ public class Person {
      * @return адрес регистрации в виде строки.
      */
     public String getAddress() {
-        System.out.println(Propiska);
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
+        return regAdres.FullAdress();
     }
 }
