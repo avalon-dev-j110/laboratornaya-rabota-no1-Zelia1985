@@ -9,11 +9,28 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        Person ivanov = new Person("3434");
-        Person smith = null;
+        Person ivanov = new Person("Иван","Иванов","","","","РФ","Курск",1,2);
+        Person smith = new Person("John","Edvard","Smith","Von","","США","Нью-йорк",1,2);
         
-       
+       String fullNameIvanov;
+       String fullNameSmith;
 
+       String fullAdressIvanov;
+       String fullAdressSmith;
+       
+       
+       fullNameIvanov = ivanov.getFullName();
+       System.out.println(fullNameIvanov);
+       
+       fullNameSmith = smith.getFullName();
+       System.out.println(fullNameSmith);
+       
+       
+       fullAdressIvanov = ivanov.getAddress();
+       System.out.println(fullAdressIvanov);
+       
+       fullAdressSmith = smith.getAddress();
+       System.out.println(fullAdressSmith);
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
