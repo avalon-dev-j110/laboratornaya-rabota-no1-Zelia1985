@@ -50,11 +50,14 @@ public class Passport {
     Date issue;
     int policedepartment;
 
-    public int getNumberpassport() {
-        return numberpassport;
+     public Passport(String name, String surname, String patronymic, String secondname) {
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.secondname = secondname;
     }
-
-    public String getName() {
+    
+   public String getName() {
         return name;
     }
 
@@ -65,15 +68,9 @@ public class Passport {
     public String getPatronymic() {
         return patronymic;
     }
-    
-    public Passport(int numberpassport, String name, String surname, String patronymic) {
-        this.numberpassport = numberpassport;
-        this.name = name;
-        this.surname = surname;
-        this.patronymic = patronymic;
+
+    public String getSecondname() {
+        return secondname;
     }
-    
-
-
     
 }
