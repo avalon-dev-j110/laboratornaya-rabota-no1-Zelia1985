@@ -1,7 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
-//тест
+//тест №2
 
-import ru.avпше ыефеalon.java.dev.j10.labs.models.Person;
+import ru.avalon.java.dev.j10.labs.models.Person;
 
 public class Main {
 
