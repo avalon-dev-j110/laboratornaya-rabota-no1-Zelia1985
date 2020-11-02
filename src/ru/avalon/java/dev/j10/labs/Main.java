@@ -1,6 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
+//тест
 
-import ru.avalon.java.dev.j10.labs.models.Person;
+import ru.avпше ыефеalon.java.dev.j10.labs.models.Person;
 
 public class Main {
 
@@ -9,8 +10,8 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        Person ivanov = new Person("Иван","Иванов","","","","РФ","Курск",1,2);
-        Person smith = new Person("John","Edvard","Smith","Von","","США","Нью-йорк",1,2);
+        Person ivanov = new Person("Иван","Иванов","","","РФ","Курск","ул. Ленина",1,2);
+        Person smith = new Person("John","Edvard","Smith","Von","США","Нью-йорк","Гагарина стрит",1,2);
         
        String fullNameIvanov;
        String fullNameSmith;
